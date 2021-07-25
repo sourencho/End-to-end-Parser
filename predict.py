@@ -4,7 +4,8 @@ import io
 import random
 
 import fire
-from sklearn.externals import joblib
+import joblib
+
 
 from COMBO import src
 from COMBO.src.utils import ConllLoader, ConllSaver

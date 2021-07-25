@@ -10,18 +10,18 @@ import tensorflow as tf
 os.environ['PYTHONHASHSEED'] = '0'
 np.random.seed(123)
 random.seed(123)
-session_conf = tf.ConfigProto(intra_op_parallelism_threads=16, inter_op_parallelism_threads=16)
+session_conf = tf.compat.v1.ConfigProto(intra_op_parallelism_threads=16, inter_op_parallelism_threads=16)
 
-from keras import backend as K
-tf.set_random_seed(123)
-sess = tf.Session(graph=tf.get_default_graph(), config=session_conf)
+from tensorflow.compat.v1.keras import backend as K
+tf.random.set_seed(123)
+sess = tf.compat.v1.Session(graph=tf.compat.v1.get_default_graph(), config=session_conf)
 K.set_session(sess)
 
 
 ### main
 
 from optparse import OptionParser
-from sklearn.externals import joblib
+import joblib
 from keras import backend as K
 
 from .data import Parser
