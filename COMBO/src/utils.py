@@ -2,8 +2,8 @@ import io
 import re
 
 import numpy as np
-from keras.utils.np_utils import to_categorical
-from keras.preprocessing.sequence import pad_sequences
+from tensorflow.compat.v1.keras.utils import to_categorical
+from tensorflow.compat.v1.keras.preprocessing.sequence import pad_sequences
 
 
 class Token:
