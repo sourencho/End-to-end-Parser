@@ -23,7 +23,6 @@ from keras.layers import (
 from keras.layers.embeddings import Embedding
 from keras.losses import categorical_crossentropy
 from keras.models import Model
-from keras.optimizers import Adam
 
 
 class RemoveMask(Lambda):
@@ -465,7 +464,8 @@ class ParserModel(KerasModel):
         model.compile(
             loss=[losses[t] for t in self.params.targets],
             loss_weights=self.params.loss_weights,
-            optimizer=Adam(lr=self.params.learning_rate, clipvalue=5.0, beta_1=0.9, beta_2=0.9, decay=1e-4),
+            optimizer = 'adam'
+            # optimizer=tf.keras.optimizers.Adam(lr=self.params.learning_rate, clipvalue=5.0, beta_1=0.9, beta_2=0.9, decay=1e-4),
         )
 
         return model
