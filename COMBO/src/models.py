@@ -20,7 +20,7 @@ from tensorflow.compat.v1.keras.layers import (
     RepeatVector,
     GaussianDropout,
 )
-from tensorflow.compat.v1.keras.layers.embeddings import Embedding
+from tensorflow.compat.v1.keras.layers import Embedding
 from tensorflow.compat.v1.keras.losses import categorical_crossentropy
 from tensorflow.compat.v1.keras.models import Model
 from tensorflow.compat.v1.keras.optimizers import Adam
