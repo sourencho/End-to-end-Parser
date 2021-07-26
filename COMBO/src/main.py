@@ -22,7 +22,6 @@ K.set_session(sess)
 
 from optparse import OptionParser
 import joblib
-from keras import backend as K
 
 from .data import Parser
 from .utils import (
