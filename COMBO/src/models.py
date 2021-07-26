@@ -1,6 +1,6 @@
 import tensorflow.compat.v1 as tf
 
-from keras import backend as K
+from tensorflow.compat.v1.keras import backend as K
 from keras import regularizers
 from keras.layers import (
     Input,
