@@ -3,7 +3,7 @@ from copy import deepcopy
 
 import numpy as np
 from tensorflow.compat.v1.keras.preprocessing.sequence import pad_sequences
-from tensorflow.compat.v1.keras.utils.np_utils import to_categorical
+from tensorflow.compat.v1.t keras.utils import to_categorical
 from sklearn.base import BaseEstimator, TransformerMixin
 
 from .encoders import (
