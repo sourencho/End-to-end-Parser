@@ -1,10 +1,8 @@
 import random
 from copy import deepcopy
 
-import tensorflow.compat.v1 as tf
-
 import numpy as np
-from tf.keras.preprocessing.sequence import pad_sequences
+from tensorflow.compat.v1.keras.preprocessing.sequence import pad_sequences
 from keras.utils.np_utils import to_categorical
 from sklearn.base import BaseEstimator, TransformerMixin
 
